@@ -1,0 +1,17 @@
+services:
+  kotlin-dgs-mysql:
+    container_name: kotlin-dgs-mysql
+    image: mysql:lts
+
+    ports:
+      - '3309:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: dgs
+    command:
+      [
+        'mysqld',
+        '--character-set-server=utf8mb4',
+        '--collation-server=utf8mb4_unicode_ci',
+        '--lower_case_table_names=1'
+      ]
