@@ -25,10 +25,10 @@ repositories {
 extra["netflixDgsVersion"] = "10.0.4"
 
 val jooqVersion: String by extra("3.19.19")
-val dbUrl = System.getenv("JOOQ_DB_URL") ?: "jdbc:mysql://localhost:3309/dgs"
-val dbUsername = System.getenv("JOOQ_DB_USERNAME") ?: "root"
-val dbPassword = System.getenv("JOOQ_DB_PASSWORD") ?: "1234"
-val dbDriver = System.getenv("JOOQ_DB_DRIVER") ?: "com.mysql.cj.jdbc.Driver"
+val dbUrl = System.getenv("SPRING_DATASOURCE_URL") ?: "jdbc:mysql://localhost:3309/dgs"
+val dbUsername = System.getenv("SPRING_DATASOURCE_USERNAME") ?: "root"
+val dbPassword = System.getenv("SPRING_DATASOURCE_PASSWORD") ?: "1234"
+val dbDriver = System.getenv("SPRING_DATASOURCE_DRIVER") ?: "com.mysql.cj.jdbc.Driver"
 
 dependencies {
     // Spring Boot
